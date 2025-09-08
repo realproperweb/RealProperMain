@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Crayfish Inn | Premier Restaurant For Sale | Ramsgate, South Africa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('cray1.jpg') center/cover no-repeat;
+            color: white;
+            padding: 20px 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffbe33;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ffbe33;
+        }
+        
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ffbe33;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+        
+        .btn:hover {
+            background: #e9ad20;
+            transform: translateY(-3px);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #222;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        /* About */
+        #about {
+            background-color: #f9f9f9;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: #ffbe33;
+            margin-bottom: 20px;
+        }
+        
+        /* Gallery */
+        #gallery {
+            background-color: #f9f9f9;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Refurbishment */
+        .refurb-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .refurb-text {
+            flex: 1;
+        }
+        
+        .refurb-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .refurb-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Contact */
+        #contact {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3') center/cover no-repeat;
+            color: white;
+            text-align: center;
+        }
+        
+        #contact h2 {
+            color: white;
+        }
+        
+        .contact-info {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-content, .refurb-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Hero Section -->
+    <header>
+        <nav>
+            <div class="logo">The Crayfish Inn</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#refurb">Refurbishment</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="hero">
+            <h1>Exceptional Restaurant Opportunity</h1>
+            <p>The Crayfish Inn - A premier dining establishment in the heart of Ramsgate, South Africa</p>
+            <a href="#contact" class="btn">Express Interest</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About The Crayfish Inn</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Nestled in the beautiful coastal town of Ramsgate, South Africa, The Crayfish Inn has been a beloved culinary destination for both locals and tourists for over two decades. Known for its exceptional seafood, warm hospitality, and stunning location, this establishment has built a stellar reputation as a must-visit restaurant on the KwaZulu-Natal South Coast.</p>
+                    <p>The restaurant boasts a prime position with easy access and ample parking, featuring breathtaking views of the ocean and direct access to the beach. The current owners have successfully operated the business for 15 years and are now offering a rare opportunity for new proprietors to take over this well-established venture.</p>
+                    <p>With a capacity of 120 guests, fully equipped kitchen facilities, and a popular bar area, The Crayfish Inn represents a turnkey business opportunity in one of South Africa's most sought-after coastal locations.</p>
+                </div>
+                <div class="about-image">
+                    <img src="cray2.jpg" alt="The Crayfish Inn Restaurant">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2>Establishment Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Fully Equipped Kitchen</h3>
+                    <p>The premises are fully equipped with commercial-grade appliances, preparation areas, and storage spaces, ready to be restored and brought to full operational status immediately.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3>Licensed Bar Area</h3>
+                    <p>We have a bar with a seating area and display units, ready for refurbishment and restoration to their original beauty.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Ocean Views</h3>
+                    <p>Breathtaking panoramic views of the Indian Ocean from multiple vantage points throughout the restaurant.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3>Ample Parking</h3>
+                    <p>Private parking area, along with ample parking space, ready for you to refurbish, restore, or transform into your next dream project.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-outdoor-tap"></i>
+                    </div>
+                    <h3>Outdoor Terrace</h3>
+                    <p>Spacious outdoor dining area with weather protection and heating, offering year-round potential. Turn your ideas and vision into reality with this prime investment opportunity.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sign"></i>
+                    </div>
+                    <h3>Established Brand</h3>
+                    <p>Well-known local brand with loyal customer base and excellent online reviews and ratings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="1.jpeg" alt="Restaurant Interior">
+                </div>
+                <div class="gallery-item">
+                    <img src="2.jpeg" alt="Restaurant Bar">
+                </div>
+                <div class="gallery-item">
+                    <img src="3.jpeg" alt="Kitchen Area">
+                </div>
+                <div class="gallery-item">
+                    <img src="4.jpeg" alt="Dining Area">
+                </div>
+                <div class="gallery-item">
+                    <img src="5.jpeg" alt="Ocean View">
+                </div>
+                <div class="gallery-item">
+                    <img src="6.jpeg" alt="Outdoor Seating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Refurbishment Section -->
+    <section id="refurb">
+        <div class="container">
+            <h2>Refurbishment Opportunity</h2>
+            <div class="refurb-content">
+                <div class="refurb-text">
+                    <h3>Customize to Your Vision</h3>
+                    <p>The current owner are motivated to sell and are exceptionally flexible regarding the condition of the sale. They are willing to discuss various options to facilitate the transition to new ownership:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li><strong>Full sale as currently operated</strong> - Take over the business in its current state</li>
+                        <li><strong>Partial refurbishment</strong> - Owners will contribute to specific upgrades you desire</li>
+                        <li><strong>Complete revamp</strong> - Willing to negotiate significant renovations before transfer</li>
+                    </ul>
+                    <p>This flexibility provides a unique opportunity to acquire a well-established restaurant and customize it to your specific vision with the current owners' support. Whether you want to maintain the current successful formula or implement your own concept, the owners are open to discussions that will make the transition seamless.</p>
+                    <p>The building structure is sound, and all essential systems are in good working order, providing an excellent canvas for your restaurant vision.</p>
+                </div>
+                <div class="refurb-image">
+                    <img src="7.jpeg" alt="Restaurant Design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Express Your Interest</h2>
+            <div class="contact-info">
+                <div class="contact-details">
+                    <p>For more information, viewing appointments, or serious inquiries:</p>
+                    <p><i class="fas fa-user"></i> Contact: Richard or Vincent</p>
+                    <p><i class="fas fa-phone"></i> Phone: +27 082 463 1553 | +27 066 256 4831  </p>
+                    <p><i class="fas fa-envelope"></i> Email: vincent@realandproper.co.za</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: Lot 2105, Marine Drive & Clarence Street, Ramsgate, 4285, South Africa</p>
+                </div>
+                <a href="mailto:crayfishinn.sale@example.com" class="btn">Send Email Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Crayfish Inn - Ramsgate, South Africa. All Rights Reserved.</p>
+            <p>Website created for sales representation purposes. | Vincent & Richard</p>
+        </div>
+    </footer>
+</body>
+</html>
