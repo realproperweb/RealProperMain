@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $notes = htmlspecialchars($_POST['notes']);
     
     // Format the email message
-    $to = "your-email@example.com"; // REPLACE WITH YOUR EMAIL
+    $to = "vincent@realandproper.co.za"; // REPLACE WITH YOUR EMAIL
     $subject = "New Real Estate Lead: $name";
     
     $message = "New Real Estate Lead Submission\n\n";
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "User Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
     
     // Email headers
-    $headers = "From: PrimeRealty Lead Form <noreply@yourdomain.com>\r\n";
+    $headers = "From: PrimeRealty Lead Form <vincent@realandproper.co.za>\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
     
