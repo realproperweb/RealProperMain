@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "User Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
     
     // Email headers
-    $headers = "From: PrimeRealty Lead Form <vincent@realandproper.co.za>\r\n";
+    $headers = "From: PrimeRealty Lead Form <noreply@realandproper.co.za>\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
     
